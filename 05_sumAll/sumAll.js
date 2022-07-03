@@ -1,7 +1,7 @@
 const sumAll = function(number1, number2) {
     let sum = 0;
-    //NaN Not a Number
-    if (isNaN(arguments[0]) || isNaN(arguments[1])) return "ERROR";
+    //isNaN checked returned true if argument was parsable to number, hence typeof
+    if (typeof arguments[0] !='number' || typeof arguments[1] !='number') return "ERROR";
     if (arguments[0] < 0 || arguments[1] <0) return "ERROR";
     //makes sure loops go from lower to higher number
     let lower,higher;
