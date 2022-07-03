@@ -6,11 +6,23 @@ const shiftAmount = function(char, amount){
     let index =-1;
     index = lettersUpper.findIndex(element => element === char);
     if(index != -1){
-        return lettersUpper[(index+amount)<26 ? (index+amount) : (index+amount) - 26];
+        if (index+amount < 0) {
+            return lettersUpper[index+amount + 26];
+        } else if (index+amount > 26){
+            return lettersUpper[index+amount - 26];
+        }else{
+            return lettersUpper[index+amount];
+        }
     } 
     index = lettersLower.findIndex(element => element === char);
     if(index != -1){
-        return lettersLower[(index+amount)<26 ? (index+amount) :(index+amount) - 26];
+        if (index+amount < 0) {
+            return lettersLower[index+amount + 26];
+        } else if (index+amount > 26){
+            return lettersLower[index+amount - 26];
+        }else{
+            return lettersLower[index+amount];
+        }
     } else {
         return char;
     }
