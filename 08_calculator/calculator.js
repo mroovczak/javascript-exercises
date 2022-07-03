@@ -26,8 +26,10 @@ const multiply = function(arr) {
   return multiplied;
 };
 
-const power = function() {
-	
+const power = function(num, pow=1) {
+	let equal = 0;
+  equal = num ** pow;
+  return equal;
 };
 
 const factorial = function() {
