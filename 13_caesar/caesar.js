@@ -8,7 +8,7 @@ const shiftAmount = function(char, amount){
     if(index != -1){
         if (index+amount < 0) {
             return lettersUpper[index+amount + 26];
-        } else if (index+amount > 26){
+        } else if (index+amount >= 26){
             return lettersUpper[index+amount - 26];
         }else{
             return lettersUpper[index+amount];
@@ -18,7 +18,7 @@ const shiftAmount = function(char, amount){
     if(index != -1){
         if (index+amount < 0) {
             return lettersLower[index+amount + 26];
-        } else if (index+amount > 26){
+        } else if (index+amount >= 26){
             return lettersLower[index+amount - 26];
         }else{
             return lettersLower[index+amount];
