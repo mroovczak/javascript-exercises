@@ -27,13 +27,17 @@ const multiply = function(arr) {
 };
 
 const power = function(num, pow=1) {
-	let equal = 0;
-  equal = num ** pow;
-  return equal;
+	let result = 0;
+  result = num ** pow;
+  return result;
 };
 
-const factorial = function() {
-	
+const factorial = function(num=0) {
+  let result = 1;
+	for(let i = 1; i<=num; i++){
+    result *= i;
+  }
+  return result;
 };
 
 // Do not edit below this line
